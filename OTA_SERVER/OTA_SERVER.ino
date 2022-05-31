@@ -1,8 +1,6 @@
-/**
-   httpUpdate.ino
-
-    Created on: 27.11.2015
-
+/*
+*Mode By @Trion
+*31.5.2022
 */
 
 #include <Arduino.h>
@@ -17,6 +15,7 @@
 #define APSSID "YOUR WIFI SSID"
 #define APPSK  "YOUR WIFI PASS"
 #endif
+
 bool Update_fw = false;
 String OTA_URL ;
 
@@ -29,21 +28,16 @@ void setup() {
 
   Serial.begin(115200);
   // Serial.setDebugOutput(true);
-
   Serial.println();
   Serial.println();
   Serial.println();
-
   for (uint8_t t = 4; t > 0; t--) {
     Serial.printf("[SETUP] WAIT %d...\n", t);
     Serial.flush();
     delay(1000);
   }
-
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP(APSSID, APPSK);
-
-
 }
 
 void update_started() {
