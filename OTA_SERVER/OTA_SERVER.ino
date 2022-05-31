@@ -14,8 +14,8 @@
 #include <ArduinoJson.h>
 #include <FS.h>
 #ifndef APSSID
-#define APSSID "BabyAncestor"
-#define APPSK  "bb2020$$"
+#define APSSID "YOUR WIFI SSID"
+#define APPSK  "YOUR WIFI PASS"
 #endif
 bool Update_fw = false;
 String OTA_URL ;
